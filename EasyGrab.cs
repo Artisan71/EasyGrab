@@ -5,7 +5,7 @@ using easyInputs;
 
 public class EasyGrab : MonoBehaviour
 {
-    /*Copyright © [.artisan71]
+    /*Copyright Â© [.artisan71]
 
     All rights reserved.
 
@@ -38,9 +38,12 @@ public class EasyGrab : MonoBehaviour
     {
         if (EasyInputs.GetGripButtonDown(EasyHand.RightHand))
         {
-            ObjectToGrab.transform.position = Controller.transform.position;
-            ObjectToGrab.transform.rotation = Controller.transform.rotation;
-            PickupSound.Play();
+            if(CanGrab == true)
+            {
+                ObjectToGrab.transform.position = Controller.transform.position;
+                ObjectToGrab.transform.rotation = Controller.transform.rotation;
+                PickupSound.Play();
+            }
         }
 
     }
