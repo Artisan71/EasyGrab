@@ -36,9 +36,9 @@ public class EasyGrab : MonoBehaviour
 
     void Update()
     {
-        if (EasyInputs.GetGripButtonDown(EasyHand.RightHand))
+        if (CanGrab == true)
         {
-            if(CanGrab == true)
+            if (EasyInputs.GetGripButtonDown(EasyHand.RightHand))
             {
                 ObjectToGrab.transform.position = Controller.transform.position;
                 ObjectToGrab.transform.rotation = Controller.transform.rotation;
